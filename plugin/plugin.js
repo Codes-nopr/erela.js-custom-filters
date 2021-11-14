@@ -10,6 +10,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -23,6 +24,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -115,6 +117,16 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                         { band: 13, gain: 0.250 },
                         { band: 14, gain: 0.300 }
                     ]
+                };
+
+                this.darthvadorFilter = {
+                    op: 'filters',
+                    guildId: this.guild,
+                    timescale: {
+                        speed: 0.975,
+                        pitch: 0.5,
+                        rate: 0.8
+                    }
                 };
 
                 this.eightdFilter = {
@@ -339,6 +351,16 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                     }
                 };
 
+                this.superfastFilter = {
+                    op: 'filters',
+                    guildId: this.guild,
+                    timescale: {
+						speed: 1.5010,
+						pitch: 1.2450,
+						rate: 1.9210
+					}
+                };
+
                 this.treblebassFilter = {
                     op: 'filters',
                     guildId: this.guild,
@@ -401,6 +423,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -432,6 +455,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bass = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -445,6 +469,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -473,6 +498,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bass = false;
                 this._bassboost = false;
                 this._bassboosthigh = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -486,6 +512,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -498,13 +525,15 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 }
             }
 
-            set eightd(state) {
-                this._eightd = state;
-
+            set darthvador(state) {
+                this._darthvador = state;
+                
                 this._bass = false;
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
+                this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
                 this._gaming = false;
@@ -517,6 +546,41 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
+                this._treblebass = false;
+                this._tremolo = false;
+                this._vaporewave = false;
+                this._vibrato = false;
+
+                if (state) {
+                    this.node.send(this.darthvadorFilter);
+                } else {
+                    this.removeFilter();
+                }
+
+            }
+
+            set eightd(state) {
+                this._eightd = state;
+
+                this._bass = false;
+                this._bassboost = false;
+                this._bassboosthigh = false;
+                this._classical = false;
+                this._darthvador = false;
+                this._electronic = false;
+                this._errape = false;
+                this._gaming = false;
+                this._highfull = false;
+                this._highvoice = false;
+                this._karaoke = false;
+                this._nightcore = false;
+                this._party = false;
+                this._pop = false;
+                this._radio = false;
+                this._rock = false;
+                this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -536,6 +600,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._errape = false;
                 this._gaming = false;
@@ -548,6 +613,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -567,6 +633,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._gaming = false;
@@ -579,6 +646,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -598,6 +666,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -610,6 +679,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -629,6 +699,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -641,6 +712,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -660,6 +732,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -672,6 +745,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -691,6 +765,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -703,6 +778,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -722,6 +798,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -734,6 +811,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -753,6 +831,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -765,6 +844,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -784,6 +864,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -796,6 +877,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -815,6 +897,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -827,6 +910,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._pop = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -846,6 +930,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -858,6 +943,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._pop = false;
                 this._radio = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -877,6 +963,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -889,6 +976,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._pop = false;
                 this._radio = false;
                 this._rock = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -901,13 +989,14 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 }
             }
 
-            set treblebass(state) {
-                this._treblebass = state;
+            set superfast(state) {
+                this._superfast = state;
 
                 this._bass = false;
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -921,6 +1010,40 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._treblebass = false;
+                this._tremolo = false;
+                this._vaporewave = false;
+                this._vibrato = false;
+
+                if (state) {
+                    this.node.send(this.superfastFilter);
+                } else {
+                    this.removeFilter();
+                }
+            }
+
+            set treblebass(state) {
+                this._treblebass = state;
+
+                this._bass = false;
+                this._bassboost = false;
+                this._bassboosthigh = false;
+                this._classical = false;
+                this._darthvador = false;
+                this._eightd = false;
+                this._electronic = false;
+                this._errape = false;
+                this._gaming = false;
+                this._highfull = false;
+                this._highvoice = false;
+                this._karaoke = false;
+                this._nightcore = false;
+                this._party = false;
+                this._pop = false;
+                this._radio = false;
+                this._rock = false;
+                this._soft = false;
+                this._superfast = false;
                 this._tremolo = false;
                 this._vaporewave = false;
                 this._vibrato = false;
@@ -939,6 +1062,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -952,6 +1076,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._vaporewave = false;
                 this._vibrato = false;
@@ -970,6 +1095,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -983,6 +1109,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vibrato = false;
@@ -1001,6 +1128,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -1014,6 +1142,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
@@ -1037,6 +1166,10 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
 
             get classical() {
                 return this._classical;
+            }
+
+            get darthvador() {
+                return this._darthvador;
             }
 
             get eightd() {
@@ -1091,6 +1224,10 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 return this._soft;
             }
 
+            get superfast() {
+                return this._superfast;
+            }
+
             get treblebass() {
                 return this._treblebass;
             }
@@ -1117,6 +1254,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._bassboost = false;
                 this._bassboosthigh = false;
                 this._classical = false;
+                this._darthvador = false;
                 this._eightd = false;
                 this._electronic = false;
                 this._errape = false;
@@ -1130,6 +1268,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._radio = false;
                 this._rock = false;
                 this._soft = false;
+                this._superfast = false;
                 this._treblebass = false;
                 this._tremolo = false;
                 this._vaporewave = false;
