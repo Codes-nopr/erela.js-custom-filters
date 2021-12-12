@@ -19,6 +19,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -255,9 +256,19 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                     op: 'filters',
                     guildId: this.guild,
                     timescale: {
-                        speed: 1.2999999523162842,
-                        pitch: 1.2999999523162842,
-                        rate: 1,
+                        speed: 1.1,
+                        pitch: 1.2,
+                        rate: 1.0
+                    }
+                };
+
+                this.lovenightcoreFilter = {
+                    op: 'filters',
+                    guildId: this.guild,
+                    timescale: {
+                        speed: 1.1,
+                        pitch: 1.2,
+                        rate: 1.0
                     }
                 };
 
@@ -432,6 +443,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -464,6 +476,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -507,6 +520,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -541,6 +555,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -575,6 +590,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -608,6 +624,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -641,6 +658,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -674,6 +692,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -707,6 +726,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -740,6 +760,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highfull = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -773,6 +794,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highfull = false;
                 this._highvoice = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -806,6 +828,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highfull = false;
                 this._highvoice = false;
                 this._karaoke = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -840,6 +863,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._pop = false;
                 this._radio = false;
                 this._rock = false;
@@ -873,6 +897,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._radio = false;
                 this._rock = false;
@@ -906,6 +931,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._rock = false;
@@ -939,6 +965,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -972,6 +999,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -1005,6 +1033,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -1038,6 +1067,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -1071,6 +1101,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -1104,6 +1135,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -1137,6 +1169,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
@@ -1149,6 +1182,39 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
 
                 if (state) {
                     this.node.send(this.vibratoFilter);
+                } else {
+                    this.removeFilter();
+                }
+            }
+
+            set lovenightcore(state) {
+                this._lovenightcore = state;
+                
+                this._bass = false;
+                this._bassboost = false;
+                this._bassboosthigh = false;
+                this._classical = false;
+                this._darthvador = false;
+                this._eightd = false;
+                this._electronic = false;
+                this._errape = false;
+                this._gaming = false;
+                this._highfull = false;
+                this._highvoice = false;
+                this._karaoke = false;
+                this._nightcore = false;
+                this._party = false;
+                this._pop = false;
+                this._radio = false;
+                this._rock = false;
+                this._soft = false;
+                this._superfast = false;
+                this._treblebass = false;
+                this._tremolo = false;
+                this._vaporewave = false;
+
+                if (state) {
+                    this.node.send(this.lovenightcoreFilter);
                 } else {
                     this.removeFilter();
                 }
@@ -1244,6 +1310,10 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 return this._vibrato;
             }
 
+            get lovenightcore() {
+                return this._lovenightcore;
+            }
+
             removeFilter() {
                 this.node.send(this.resetFilters);
             }
@@ -1263,6 +1333,7 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                 this._highvoice = false;
                 this._karaoke = false;
                 this._nightcore = false;
+                this._lovenightcore = false;
                 this._party = false;
                 this._pop = false;
                 this._radio = false;
