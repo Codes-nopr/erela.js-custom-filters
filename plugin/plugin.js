@@ -256,8 +256,8 @@ module.exports.FilterManager = class FilterManager extends erela.Plugin {
                     op: 'filters',
                     guildId: this.guild,
                     timescale: {
-                        speed: 1.1,
-                        pitch: 1.2,
+                        speed: 1.3,
+                        pitch: 1.3,
                         rate: 1.0
                     }
                 };
